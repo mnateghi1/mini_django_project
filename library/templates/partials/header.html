@@ -1,0 +1,5 @@
+<form method="get" action="{% url 'library:search_book' %}">
+    {% csrf_token %}
+    <input type="text" name="query" required placeholder="enter your name or author's book...">
+    <input type="submit" value="search">
+</form>

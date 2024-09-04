@@ -1,0 +1,10 @@
+{% extends 'parent/base.html' %}
+{% block title %}delete book{% endblock %}
+{% block content %}
+    <a href="{% url 'library:index' %}"> return to main menu</a>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="delete">
+    </form>
+{% endblock %}

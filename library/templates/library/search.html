@@ -1,0 +1,13 @@
+{% extends 'parent/base.html' %}
+{% block title %}searched books{% endblock %}
+{% block content %}
+   {% if query %}
+       Search results for "{{ query }}". {{ results.count }} books found.
+   {% endif %}
+    <br>
+    {% for book in results %}
+        <a href="{{ book.get_absolute_url }}">{{ book.title }} </a>
+        {% empty %}
+            Nothing found!
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'parent/base.html' %}
+{% block title %}Library Management{% endblock %}
+{% block content %}
+    <h1>Library Management</h1>
+    <h2>
+        <a href="{% url 'library:book_list' %}">Books list</a>
+    </h2>
+    <h2>
+        <a href="{% url 'library:add_book' %}">Add new book</a>
+    </h2>
+{#    <h2>#}
+{#        <a href="{% url 'forms:delete_book' %}">Delete book</a>#}
+{#    </h2>#}
+{% endblock %}
